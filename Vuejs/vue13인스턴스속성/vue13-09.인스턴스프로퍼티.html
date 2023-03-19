@@ -100,6 +100,7 @@
       /* 이벤트 핸들러 등록 + 일반 함수 */
       msgKey(e) {
         console.log(e.target.value);
+        debugger;
         this.$data.mesg1 = e.target.value;
       }
 
@@ -107,7 +108,7 @@
     computed: {
       /* 자동처리 + 동기식. 변수명이 메서드 명이다. 메서드로 작성. return 필수.  data 와 공존 불가 */
       mesg2() {
-        return this.$data.mesg1 + "" + new Date().toLocal
+        return this.$data.mesg1 + "" + new Date().toLocaleTimeString()
       }
     },
   });
